@@ -1,0 +1,29 @@
+<!--Created by Ing. Peter Petraník-->
+
+<!-- <md-whiteframe class="session-monitor md-whiteframe-z1" layout="column" layout-padding layout-margin> -->
+<div class="session-monitor">
+  <!--Header with actual address-->
+  <div class="card-header">
+    <span>
+      {{smCtrl.sessionsPageUrl}}
+      <md-tooltip md-delay="0" md-direction="bottom">Share session page URL</md-tooltip>
+    </span>
+  </div>
+
+
+  <div class="card-content">
+
+    <!--IFRAME-->
+    <iframe dynamic-height="80" class="ng-cloak" id="monitor-iframe" refreshable-iframe="smCtrl.refreshIframe"
+            src="{{smCtrl.sessionsPageUrl}}" frameborder="0"></iframe>
+
+
+    <!--Button layout-->
+    <!--ng-include-->
+    <div ng-include="'app/session-monitor/session-monitor_float-buttons.html'"
+         class="btn-layout" layout-align="center end" layout="column"></div>
+
+    <div class="authors-sign">Created by Peťo</div>
+  </div>
+  <!-- </md-whiteframe> -->
+</div>

@@ -1,0 +1,92 @@
+/**
+ * Created by Ing. Peter Petraník
+ */
+
+.url-generator {
+  line-height: 0.9em;
+  position: relative;
+}
+
+.url-generator .collab-id {
+  cursor: pointer;
+}
+
+.url-generator .form-item {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+
+.select-values-container {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+}
+
+.url-generator .fake-label {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.url-generator .advanced-section.active {
+  border-left: 2px solid;
+  border-color: red;
+}
+
+.url-generator .advanced-section a {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.url-generator .advanced-section a.color {
+  color: rgb(255, 82, 82) !important;
+}
+
+.url-generator #url-showcase {
+  margin-top: 5px;
+  border-radius: 3px;
+  text-align: center;
+  position: relative !important;
+  padding-bottom: 10px;
+}
+
+.url-generator #url-showcase .pretty-icon {
+  cursor: pointer !important;
+  margin: 4px;
+  padding: 3px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(158, 158, 158);
+}
+
+.url-generator #url-showcase .pretty-icon.active {
+  background-color: rgb(255, 82, 82);
+}
+
+.url-generator #url-showcase .url-text {
+  box-sizing: border-box;
+  width: 100%;
+  word-break: break-all;
+  text-align: left;
+  padding-right: 70px;
+}
+
+.url-generator #url-showcase .url-text .param {
+  color: rgb(255, 82, 82);
+}
+
+.url-generator .btn-layout {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.qr-tooltip-text {
+  width: 100%;
+  max-width: 400px;
+  word-break: break-all;
+  text-align: start;
+}

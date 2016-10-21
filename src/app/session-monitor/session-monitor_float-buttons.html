@@ -1,0 +1,22 @@
+<md-button aria-label="SECURITY_DATA" class="md-fab md-accent" ng-click="smCtrl.onClickRefreshIframe()">
+  <md-icon class="ng-cloak" md-font-icon="material-icons">refresh</md-icon>
+  <md-tooltip md-direction="left">SECURITY_DATA</md-tooltip>
+</md-button>
+
+<md-button aria-label="SECURITY_DATA" class="md-fab md-accent" ng-click="smCtrl.onClickKillAllSessions()">
+  <md-icon class="ng-cloak" md-font-icon="material-icons">cancel</md-icon>
+  <md-tooltip md-direction="left">SECURITY_DATA</md-tooltip>
+</md-button>
+
+<md-button aria-label="SECURITY_DATA" class="md-fab md-primary md-mini"
+           ng-click="smCtrl.onClickKillLastCreatedSession()">
+  <md-icon class="ng-cloak" md-font-icon="material-icons">remove_circle</md-icon>
+  <md-tooltip md-direction="left">SECURITY_DATA
+    {{smCtrl.lastCreatedCollabSessionID}}
+  </md-tooltip>
+</md-button>
+
+<md-button aria-label="SECURITY_DATA" class="md-fab md-primary md-mini" ng-click="smCtrl.onClickOpenSessionPage()">
+  <md-icon class="ng-cloak" md-font-icon="material-icons">link</md-icon>
+  <md-tooltip md-direction="left">SECURITY_DATA</md-tooltip>
+</md-button>

@@ -1,0 +1,20 @@
+﻿{
+  "name": "Comoto Session Generator",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "",
+  "icons": {
+    "128": "assets/chrome-ext-icons/generator.png"
+  },
+  "browser_action": {
+    "default_icon": "assets/chrome-ext-icons/generator.png",
+    "default_popup": "chrome-extension_index.html",
+    "default_title": "Comoto Session Generator"
+  },
+  "minimum_chrome_version": "18",
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "tabs"
+  ]
+}

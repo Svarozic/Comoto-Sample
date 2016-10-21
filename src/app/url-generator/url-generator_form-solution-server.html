@@ -1,0 +1,37 @@
+<!--server input-->
+<span ng-switch="ugCtrl.isPredefinedDataLoadingServer" flex>
+
+<span ng-switch-when="true">
+  <md-input-container class="md-block md-input-select-container-fix">
+    <label>SECURITY_DATA</label>
+    <md-select class="md-accent"
+               ng-model="ugCtrl.dataloadingServerOption"
+               md-container-class="select-values-container">
+      <md-option ng-repeat="server in ugCtrl.serverValues" value="{{::$index}}" title="{{::server[2]}}">
+        {{::server[0]}}
+      </md-option>
+    </md-select>
+  </md-input-container>
+</span>
+
+<span ng-switch-when="false">
+  <md-input-container class="md-block md-input-container-fix">
+    <label>SECURITY_DATA
+      <small>SECURITY_DATA</small>
+    </label>
+    <input id="solution-option-custom" ng-model="ugCtrl.dataloadingServerOptionCustom">
+  </md-input-container>
+</span>
+
+</span>
+
+<!--switch-->
+<md-switch class="md-accent md-switch-fix" ng-model="ugCtrl.isPredefinedDataLoadingServer"
+           aria-label="Predefined Solution Servers">
+  <div>
+    <md-icon ng-class="{'md-accent': ugCtrl.isPredefinedDataLoadingServer}" class="ng-cloak"
+             md-font-icon="material-icons">
+      format_list_bulleted
+    </md-icon>
+  </div>
+</md-switch>

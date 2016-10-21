@@ -1,0 +1,157 @@
+<!--Created by Ing. Peter Petraník-->
+
+<!-- <md-whiteframe class="url-generator md-whiteframe-z1" layout="column" layout-padding layout-margin> -->
+<div class="url-generator" layout="column">
+  <!--Header with actual collabSessionID-->
+  <div class="card-header">
+    <span>
+      <b class="collab-id" ng-click="ugCtrl.onClickCollabSessionID()">{{ugCtrl.collabSessionID}}</b>
+      <md-tooltip md-delay="0" md-direction="bottom">Session ID (Click to recreate)</md-tooltip>
+    </span>
+  </div>
+
+  <br/>
+
+  <div class="card-content">
+
+    <!--ng-include-->
+    <div ng-include="'app/url-generator/url-generator_form-share-server.html'"
+         layout="row" class="form-item" layout-align="start start"></div>
+
+
+    <!--ng-include-->
+    <div ng-include="'app/url-generator/url-generator_form-solution-server.html'"
+         layout="row" class="form-item" layout-align="start start"></div>
+
+
+    <!--ng-include-->
+    <div ng-include="'app/url-generator/url-generator_form-studies.html'"
+         layout="row" class="form-item" layout-align="start start"></div>
+
+
+    <section class="advanced-section" ng-class="{'active': ugCtrl.isAdvancedVisible}">
+      <md-checkbox class="form-item md-accent" ng-model="ugCtrl.isAdvancedVisible" aria-label="Checkbox 1">
+        <a ng-class="{'color': ugCtrl.isAdvancedVisible}">Advanced Parameters</a>
+      </md-checkbox>
+
+      <div ng-show="ugCtrl.isAdvancedVisible">
+
+        <div class="form-item">
+          <label class="fake-label" for="modalities-chips">SECURITY_DATA
+            <small>(optional)</small>
+          </label>
+          <md-chips id="modalities-chips" class="md-chips-fix" ng-model="ugCtrl.modalities"
+                    placeholder="<modality>" secondary-placeholder="<modality>">
+            <md-chip-template><strong>{{::$chip}}</strong></md-chip-template>
+          </md-chips>
+        </div>
+
+
+        <div class="form-item">
+          <label class="fake-label" for="body-parts-chips">SECURITY_DATA
+            <small>(optional)</small>
+          </label>
+          <md-chips id="body-parts-chips" class="md-chips-fix" ng-model="ugCtrl.bodyParts"
+                    placeholder="<code_value>" secondary-placeholder="<code_value>">
+            <md-chip-template><strong>{{::$chip}}</strong></md-chip-template>
+          </md-chips>
+        </div>
+
+
+        <br/>
+
+        <div class="form-item">
+          <md-input-container class="md-block md-input-container-fix">
+            <label>Template</label>
+            <md-select class="md-accent" ng-model="ugCtrl.templateOption" md-container-class="select-values-container">
+              <md-option ng-repeat="template in ugCtrl.templateValues" value="{{::template[1]}}">
+                {{::template[0]}} <i>({{::template[1]}})</i>
+              </md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+
+
+        <br/>
+
+        <div class="form-item">
+          <label class="fake-label" for="custom-parameters-chips">SECURITY_DATA
+            <small>(optional)</small>
+          </label>
+          <md-chips id="custom-parameters-chips" class="md-chips-fix" ng-model="ugCtrl.customParameters"
+                    placeholder="<key>=<value>" secondary-placeholder="<key>=<value>">
+            <md-chip-template><strong>{{::$chip}}</strong></md-chip-template>
+          </md-chips>
+        </div>
+
+
+        <br/>
+        <div class="form-item">
+          <md-input-container class="md-block md-input-container-fix">
+            <label>GWT Log Level</label>
+            <md-select class="md-accent" ng-model="ugCtrl.logLevelOption" md-container-class="select-values-container">
+              <md-option ng-repeat="logLevel in ugCtrl.gwtLogLevelValues" value="{{::logLevel}}">{{::logLevel}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+
+        <div layout="row">
+          <md-switch flex class="form-item md-accent md-switch-fix" ng-model="ugCtrl.isDevelopment"
+                     aria-label="Use GWT classic debug mode">
+            <small class="fake-label">&gwtcodesvr</small>
+            <md-tooltip md-direction="top">Use GWT classic debug mode</md-tooltip>
+          </md-switch>
+
+          <md-switch flex class="form-item md-accent md-switch-fix" ng-model="ugCtrl.isHttps" aria-label="Use HTTPS">
+            <small class="fake-label">https://</small>
+            <md-tooltip md-direction="top">Use HTTPS protocol</md-tooltip>
+          </md-switch>
+
+          <md-switch flex class="form-item md-accent md-switch-fix" ng-model="ugCtrl.isWaitForStart"
+                     aria-label="Wait if session is not created">
+            <small class="fake-label">&</small>
+            <md-tooltip md-direction="top">Wait if session is not created</md-tooltip>
+          </md-switch>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!--URL Showcase-->
+    <md-switch class="form-item md-accent md-switch-fix" ng-model="ugCtrl.isUrlShowcaseFormated" aria-label="Format">
+      <small class="fake-label">Pretty Format</small>
+    </md-switch>
+
+    <div id="url-showcase" class="form-item" layout="row" layout-align="center start">
+      <div layout="column">
+        <div ng-click="ugCtrl.onClickPrettyPrepareAndJoin()">
+          <md-icon class="ng-cloak pretty-icon" md-font-icon="material-icons"
+                   ng-class="ugCtrl.getPrettyPrepareAndJoinStyle()">play_arrow
+          </md-icon>
+        </div>
+        <div ng-click="ugCtrl.onClickPrettyJoin()">
+          <md-icon class="ng-cloak pretty-icon" md-font-icon="material-icons" ng-class="ugCtrl.getPrettyJoinStyle()">
+            remove_red_eye
+          </md-icon>
+        </div>
+        <div ng-click="ugCtrl.onClickPrettyPrepare()">
+          <md-icon class="ng-cloak pretty-icon" md-font-icon="material-icons" ng-class="ugCtrl.getPrettyPrepareStyle()">
+            pause_circle_outline
+          </md-icon>
+        </div>
+      </div>
+
+      <code class="url-text" ng-bind-html="ugCtrl.urlShowcase"> </code>
+    </div>
+
+    <div class="authors-sign">Created by Peťo</div>
+
+    <!--Button layout-->
+    <div ng-include="'app/url-generator/url-generator_float-buttons.html'"
+         class="btn-layout" layout="column" layout-align="center end"></div>
+  </div>
+  <!-- </md-whiteframe> -->
+</div>

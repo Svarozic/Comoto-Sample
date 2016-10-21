@@ -1,0 +1,55 @@
+<!-- URL link buttons -->
+<md-fab-speed-dial md-direction="left" ng-class="'md-scale'" md-open="ugCtrl.isLinkBtnOpen"
+                   ng-mouseenter="ugCtrl.isLinkBtnOpen=true" ng-mouseleave="ugCtrl.isLinkBtnOpen=false">
+  <md-fab-trigger>
+    <md-button aria-label="SECURITY_DATA" class="md-fab">
+      <md-icon class="ng-cloak" md-font-icon="material-icons">link</md-icon>
+    </md-button>
+  </md-fab-trigger>
+  <md-fab-actions>
+    <md-button class="md-fab md-accent md-mini" aria-label="SECURITY_DATA" ng-click="ugCtrl.onClickPrepareAndJoin()">
+      <md-icon class="ng-cloak" md-font-icon="material-icons">play_arrow</md-icon>
+      <md-tooltip md-direction="top">SECURITY_DATA</md-tooltip>
+    </md-button>
+    <md-button class="md-fab md-accent md-mini" aria-label="SECURITY_DATA" ng-click="ugCtrl.onClickJoin()">
+      <md-icon class="ng-cloak" md-font-icon="material-icons">remove_red_eye</md-icon>
+      <md-tooltip md-direction="top">SECURITY_DATA</md-tooltip>
+    </md-button>
+    <md-button class="md-fab md-accent md-mini" aria-label="SECURITY_DATA" ng-click="ugCtrl.onClickPrepare()">
+      <md-icon class="ng-cloak" md-font-icon="material-icons">pause_circle_outline</md-icon>
+      <md-tooltip md-direction="top">SECURITY_DATA</md-tooltip>
+    </md-button>
+  </md-fab-actions>
+</md-fab-speed-dial>
+
+<md-button aria-label="SECURITY_DATA" class="md-fab md-primary md-mini"
+           ng-click="ugCtrl.onClickKillLastCreatedSession()">
+  <md-icon class="ng-cloak" md-font-icon="material-icons">remove_circle</md-icon>
+  <md-tooltip md-direction="left">SECURITY_DATA</md-tooltip>
+</md-button>
+
+<!-- QR code buttons -->
+<md-fab-speed-dial md-direction="left" ng-class="'md-scale'" md-open="ugCtrl.isQRBtnOpen"
+                   ng-mouseenter="ugCtrl.isQRBtnOpen=true" ng-mouseleave="ugCtrl.isQRBtnOpen=false">
+  <md-fab-trigger>
+    <md-button aria-label="qr-SECURITY_DATA" class="md-fab md-primary md-mini">
+      <md-icon class="ng-cloak" md-font-icon="material-icons">camera</md-icon>
+    </md-button>
+  </md-fab-trigger>
+  <md-fab-actions>
+    <md-button aria-label="qr-SECURITY_DATA" class="md-fab md-primary md-mini"
+               ng-click="ugCtrl.onClickPrepareAndJoinQR($event)">
+      <md-icon class="ng-cloak" md-font-icon="material-icons">play_arrow</md-icon>
+      <md-tooltip md-direction="top">SECURITY_DATA</md-tooltip>
+    </md-button>
+    <md-button aria-label="qr-SECURITY_DATA" class="md-fab md-primary md-mini" ng-click="ugCtrl.onClickJoinQR($event)">
+      <md-icon class="ng-cloak" md-font-icon="material-icons">remove_red_eye</md-icon>
+      <md-tooltip md-direction="top">SECURITY_DATA</md-tooltip>
+    </md-button>
+    <md-button aria-label="qr-SECURITY_DATA" class="md-fab md-primary md-mini"
+               ng-click="ugCtrl.onClickPrepareQR($event)">
+      <md-icon class="ng-cloak" md-font-icon="material-icons">pause_circle_outline</md-icon>
+      <md-tooltip md-direction="top">SECURITY_DATA</md-tooltip>
+    </md-button>
+  </md-fab-actions>
+</md-fab-speed-dial>

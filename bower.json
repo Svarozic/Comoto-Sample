@@ -1,0 +1,15 @@
+{
+  "name": "comoto-sample",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-material": "^1.0.6",
+    "angular-local-storage": "^0.2.5",
+    "angular-qr": "^0.2.0",
+    "material-design-iconfont": "^0.0.2"
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "angular": "^1.5.0"
+  }
+}

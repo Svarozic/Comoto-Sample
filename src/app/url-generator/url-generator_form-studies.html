@@ -1,0 +1,35 @@
+<!--study input-->
+<span ng-switch="ugCtrl.isPredefinedStudy" flex>
+  <!--1-Study-->
+  <span ng-switch-when="true">
+     <md-input-container class="md-block md-input-select-container-fix">
+       <label>Studies</label>
+       <md-select class="md-accent"
+                  ng-model="ugCtrl.studyOption"
+                  md-container-class="select-values-container">
+         <md-option ng-repeat="study in ugCtrl.studyValues | orderBy:'[0]'" value="{{::study[1]}}">
+           {{::study[0]}}
+         </md-option>
+       </md-select>
+     </md-input-container>
+  </span>
+
+  <!--N-Studies-->
+  <span ng-switch-when="false">
+    <label class="fake-label">Studies</label>
+    <md-chips id="studies-chips" class="md-chips-fix" ng-model="ugCtrl.studyIdsOption"
+              placeholder="<study_uid>" secondary-placeholder="<study_uid>">
+      <md-chip-template><strong>{{::$chip}}</strong></md-chip-template>
+    </md-chips>
+  </span>
+</span>
+
+<!--switch-->
+<md-switch class="md-accent md-switch-fix" ng-model="ugCtrl.isPredefinedStudy"
+           aria-label="Only One Study">
+  <div>
+    <md-icon ng-class="{'md-accent': ugCtrl.isPredefinedStudy}" class="ng-cloak" md-font-icon="material-icons">
+      format_list_bulleted
+    </md-icon>
+  </div>
+</md-switch>

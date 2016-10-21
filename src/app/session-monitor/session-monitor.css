@@ -1,0 +1,27 @@
+/**
+ * Created by Ing. Peter Petraník
+ */
+
+.session-monitor {
+  font-size: 0.9em;
+  line-height: 0.9em;
+  position: relative;
+}
+
+.session-monitor #monitor-iframe {
+  width: 100%;
+  min-height: 500px;
+}
+
+.session-monitor .btn-layout {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}

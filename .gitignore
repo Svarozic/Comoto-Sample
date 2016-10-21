@@ -1,0 +1,10 @@
+# Project
+/.tmp
+/dist
+/bower_components
+/node_modules
+
+
+#Jetbrains
+/.idea
+/*.impl

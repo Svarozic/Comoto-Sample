@@ -1,0 +1,14 @@
+<!--Created by Ing. Peter Petraník-->
+
+<div class="chrome-switcher">
+  <md-button aria-label="switch" class="float-btn md-mini md-fab md-raised md-accent"
+             ng-click="csCtrl.onClickSwitchBtn()">
+    <md-icon class="ng-cloak" md-font-icon="material-icons" ng-if="csCtrl.isGeneratorVisible">desktop_windows</md-icon>
+    <md-icon class="ng-cloak" md-font-icon="material-icons" ng-if="!csCtrl.isGeneratorVisible">keyboard</md-icon>
+  </md-button>
+
+  <url-generator ng-if="csCtrl.isGeneratorVisible"></url-generator>
+
+  <session-monitor ng-if="!csCtrl.isGeneratorVisible"></session-monitor>
+
+</div>
