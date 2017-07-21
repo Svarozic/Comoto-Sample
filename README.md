@@ -2,16 +2,15 @@
 
 Sample of single page application (SPA) to generate startup URLs for GWT app at work with appropriate URL parameters according to form.
 
+![Responsive website preview](/github-preview-images/comoto-browser.PNG?raw=true "Responsive website preview")
+![Chrome extension preview](/github-preview-images/comoto-ext.PNG?raw=true "Chrome extension preview")
+
 Features:
 - Browser LocalStorage was used to store last used URL parameters. 
 - SPA was distributed as responsive website, where control buttons in form were opening new tabs of browser. If SPA was distributed as chrome extension, same button were manipulating with actual tab through chrome-extension API, This two different functions were provided by angular module 'comoto-sample.PlatformService' that was selected by gulp during building distribution files.
 - Monitor page of running GWT app in IFrame inside of SPA
 - URL is presented in raw or pretty format in real-time (Angular 2way data binding)
 - URL can be presented as image with QR code for easy triggering from mobile devices with camera 
- 
-
-![Responsive website preview](/github-preview-images/comoto-browser.PNG?raw=true "Responsive website preview")
-![Chrome extension preview](/github-preview-images/comoto-ext.PNG?raw=true "Chrome extension preview")
 
 ### Main frameworks/tools in project:
 
